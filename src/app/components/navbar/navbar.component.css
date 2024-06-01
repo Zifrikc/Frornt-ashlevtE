@@ -1,0 +1,13 @@
+/* src/app/components/layout/navbar/navbar.component.css */
+
+.spacer {
+    flex: 1 1 auto;
+  }
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}

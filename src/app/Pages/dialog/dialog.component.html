@@ -1,0 +1,78 @@
+<div class="container">
+    <h1 mat-dialog-title>Formulario de Registro</h1>
+    <div mat-dialog-content>
+        <form (ngSubmit)="formSubmitWorker()">
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Nombres</mat-label>
+                        <input matInput placeholder="...." [(ngModel)]="newWorkerData.fullName"  required>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput placeholder="...." [(ngModel)]="newWorkerData.lastName"  required>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Tipo de Documento</mat-label>
+                        <mat-select [(ngModel)]="newWorkerData.typeDocument"  required>
+                            <mat-option value="one">DNI</mat-option>
+                            <mat-option value="two">Pasaporte</mat-option>
+                            <mat-option value="three">Carnet</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col">
+                    <mat-form-field appearance="fill"  class="w-100">
+                        <mat-label>Numero de documento</mat-label>
+                        <input type="number" matInput placeholder="...." [(ngModel)]="newWorkerData.numberDocument"  required>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Nacimiento</mat-label>
+                        <input matInput placeholder="MM/DD/YYYY" [(ngModel)]="newWorkerData.birthDate"  required>
+                        <mat-icon matSuffix>calendar_today</mat-icon>
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Ingreso</mat-label>
+                        <input matInput placeholder="MM/DD/YYYY" [(ngModel)]="newWorkerData.entryDate"  required>
+                        <mat-icon matSuffix>calendar_today</mat-icon>
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Numeros de hijos</mat-label>
+                        <input type="number" matInput placeholder="...." [(ngModel)]="newWorkerData.numberChildren"  required>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <button type="submit" mat-button mat-raised-button color="warn" class="rounded-2 w-25">Guardar</button>
+            <button mat-button mat-raised-button mat-dialog-close color="primary" class="rounded-2 w-25">Volver</button>
+        </form>
+
+    </div>
+    <div mat-dialog-actions>
+    </div>
+
+</div>
